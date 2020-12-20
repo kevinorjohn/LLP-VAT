@@ -11,13 +11,15 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 from torch.utils.data.dataset import random_split
 
-from .lib.llp import BagMiniBatch, load_llp_dataset, BagSampler, Iteration
-from .lib.losses import (ProportionLoss, PiModelLoss, VATLoss,
-                         compute_hard_l1, compute_soft_kl)
-from .lib.networks import wide_resnet28_2
-from .lib.run_experiment import write_meters, RunExperiment, save_checkpoint
-from .lib.ramps import sigmoid_rampup
-from .lib.utils import AverageMeterSet, accuracy, parameters_string
+from llp_vat.lib.llp import (BagMiniBatch, load_llp_dataset, BagSampler,
+                             Iteration)
+from llp_vat.lib.losses import (ProportionLoss, PiModelLoss, VATLoss,
+                                compute_hard_l1, compute_soft_kl)
+from llp_vat.lib.networks import wide_resnet28_2
+from llp_vat.lib.run_experiment import (write_meters, RunExperiment,
+                                        save_checkpoint)
+from llp_vat.lib.ramps import sigmoid_rampup
+from llp_vat.lib.utils import AverageMeterSet, accuracy, parameters_string
 
 
 def get_rampup_weight(weight, iteration, rampup):

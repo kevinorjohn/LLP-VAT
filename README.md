@@ -20,7 +20,7 @@ Make sure to generate the LLP data before running the experiment of LLP-VAT.
 
 ### Preprocessing
 ```
-python -m llp-vat.preprocessing --dataset_name cifar10 --alg uniform --bag_size 64
+python -m llp_vat.preprocessing --dataset_name cifar10 --alg uniform --bag_size 64
 ```
 
 Required arguments:
@@ -47,7 +47,7 @@ Arugments for the bag creation algorithm:
 
 ### Experiment
 ```
-python -m llp-vat.main --dataset_name cifar10 --alg uniform -b 64
+python -m llp_vat.main --dataset_name cifar10 --alg uniform -b 64
 ```
 
 Required arguments:
@@ -69,3 +69,14 @@ Optional arguments:
 | --seed | pass an int for reproducible results | 0 |
 | --consistency_type | `vat`, `pi` or `none` | vat |
 | --consistency | consistecny loss weight | 0.05 |
+
+
+## Citation
+```
+@InProceedings{pmlr-v129-tsai20a, 
+    title = {Learning from Label Proportions with Consistency Regularization}, 
+    author = {Tsai, Kuen-Han and Lin, Hsuan-Tien}, 
+    booktitle = {Proceedings of The 12th Asian Conference on Machine Learning}, 
+    year = {2020} 
+}
+```

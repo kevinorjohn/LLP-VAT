@@ -9,7 +9,7 @@ from sklearn.cluster import MiniBatchKMeans
 from sklearn.decomposition import PCA
 from torch.utils.data import Sampler, BatchSampler, RandomSampler
 
-from .datasets import load_dataset
+from llp_vat.lib.datasets import load_dataset
 
 
 class Iteration:
